@@ -1,0 +1,131 @@
+@gokusaiyan786 ➜ /workspaces/codespaces-blank $ python app.py
+Starting comprehensive trading sentiment analysis...
+
+Loading datasets...
+ Trading data loaded: 211224 records
+  Columns: ['Account', 'Coin', 'Execution Price', 'Size Tokens', 'Size USD', 'Side', 'Timestamp IST', 'Start Position', 'Direction', 'Closed PnL', 'Transaction Hash', 'Order ID', 'Crossed', 'Fee', 'Trade ID', 'Timestamp']
+ Sentiment data loaded: 2644 records
+  Columns: ['timestamp', 'value', 'classification', 'date']
+Preprocessing data...
+Parsing Timestamp IST column...
+ Successfully parsed Timestamp IST using format: %d-%m-%Y %H:%M
+Trading data: 211224 → 211224 records (removed 0 invalid)
+Sentiment data: 2644 → 2644 records (removed 0 invalid)
+Data preprocessing completed
+Analyzing trader performance...
+Analyzed 32 traders
+Merging trading and sentiment data...
+ Merged data: 479 days
+Calculating sentiment correlations...
+
+SENTIMENT CORRELATIONS:
+--------------------------------------------------
+TOTAL_PNL:
+  Pearson:  -0.083 (p=0.071)
+  Spearman: 0.040 (p=0.384)
+AVG_PNL:
+  Pearson:  0.037 (p=0.415)
+  Spearman: 0.100 (p=0.029)
+TRADE_COUNT:
+  Pearson:  -0.245 (p=0.000)
+  Spearman: -0.033 (p=0.477)
+TOTAL_VOLUME:
+  Pearson:  -0.264 (p=0.000)
+  Spearman: -0.056 (p=0.219)
+ACTIVE_TRADERS:
+  Pearson:  -0.278 (p=0.000)
+  Spearman: -0.154 (p=0.001)
+Analyzing sentiment phase performance...
+
+ SENTIMENT PHASE ANALYSIS:
+------------------------------------------------------------
+                avg_daily_pnl   total_pnl  pnl_volatility  avg_trade_pnl  avg_daily_trades  avg_daily_volume  total_volume  avg_active_traders  avg_sentiment_value
+classification                                                                                                                                                     
+Extreme Fear         52793.59   739110.25       101262.39          38.43           1528.57        8177447.25  1.144843e+08               11.43                19.29
+Extreme Greed        23817.29  2715171.31        72827.30          56.74            350.81        1091799.69  1.244652e+08                4.61                79.25
+Fear                 36891.82  3357155.44        96611.85          31.28            679.53        5311261.43  4.833248e+08                6.92                32.26
+Greed                11140.57  2150129.27        62427.96          39.41            260.64        1495246.09  2.885825e+08                3.36                68.34
+Neutral              19297.32  1292920.68        37995.21          63.82            562.48        2690180.05  1.802421e+08                5.61                49.79
+Identifying trader clusters...
+
+ TRADER CLUSTERS:
+--------------------------------------------------
+
+Cluster 0 - Conservative Traders (22 traders):
+total_pnl       mean      145335.00
+                median     66679.64
+win_rate        mean          38.47
+roi             mean           0.97
+total_trades    mean        5316.45
+avg_trade_size  mean        6912.12
+
+Cluster 1 - High-Volume Traders (1 traders):
+total_pnl       mean      379095.41
+                median    379095.41
+win_rate        mean          81.09
+roi             mean           1.47
+total_trades    mean        9893.00
+avg_trade_size  mean        2600.78
+
+Cluster 2 - Profitable Specialists (4 traders):
+total_pnl       mean      1379964.19
+                median    1270196.81
+win_rate        mean           39.81
+roi             mean            2.22
+total_trades    mean        19981.75
+avg_trade_size  mean         6263.04
+
+Cluster 3 - Risk-Takers (5 traders):
+total_pnl       mean      240127.33
+                median    199505.59
+win_rate        mean          40.61
+roi             mean          12.14
+total_trades    mean         888.40
+avg_trade_size  mean        2506.85
+Generating trading insights...
+
+ KEY INSIGHTS:
+----------------------------------------
+   Best performance during: Extreme Fear periods
+   Worst performance during: Greed periods
+Creating visualizations...
+ Visualizations saved as 'trading_sentiment_analysis.png'
+
+================================================================================
+ TRADING PERFORMANCE vs MARKET SENTIMENT ANALYSIS REPORT
+================================================================================
+
+ DATASET OVERVIEW:
+  • Total Trades: 211,224
+  • Date Range: 2023-05-01 to 2025-05-01
+  • Total Volume: $1,191,187,442.46
+  • Total PnL: $10,296,958.94
+  • Total Traders: 32
+  • Sentiment Records: 2,644
+  • Overlapping Days: 479
+
+ TOP 5 PERFORMERS:
+  1. 0xb1231a4a2dd02f2276fa3c5e2a2f3436e6bfed23 - PnL: $2,143,382.60 - Win Rate: 33.7%
+  2. 0x083384f897ee0f19899168e3b1bec365f52a9012 - PnL: $1,600,229.82 - Win Rate: 36.0%
+  3. 0xbaaaf6571ab7d571043ff1e313a9609a10637864 - PnL: $940,163.81 - Win Rate: 46.8%
+  4. 0x513b8629fe877bb581bf244e326a047b249c4ff1 - PnL: $840,422.56 - Win Rate: 40.1%
+  5. 0xbee1707d6b44d4d52bfe19e41f8a828645437aab - PnL: $836,080.55 - Win Rate: 42.8%
+
+ PERFORMANCE SUMMARY:
+  • Average Win Rate: 40.3%
+  • Average ROI: 2.9%
+  • Profitable Traders: 29
+  • Loss-making Traders: 3
+
+ KEY INSIGHTS:
+   Best performance during: Extreme Fear periods
+   Worst performance during: Greed periods
+
+ TRADING RECOMMENDATIONS:
+  • Monitor sentiment during extreme fear periods for buying opportunities
+  • Implement position sizing based on sentiment phases
+  • Focus on risk management during high volatility periods
+  • Consider contrarian strategies during extreme sentiment readings
+
+ Analysis Complete! Check the visualizations for detailed insights.
+================================================================================
